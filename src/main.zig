@@ -26,18 +26,18 @@ const hotkeys = [_]HotKeyConfig{
 };
 
 pub fn main() !void {
-    if (builtin.os.tag != .macos) {
-        std.debug.print("This app only runs on macOS.\n", .{});
-        return;
-    }
+    // if (builtin.os.tag != .macos) {
+    //     std.debug.print("This app only runs on macOS.\n", .{});
+    //     return;
+    // }
 
     var state = try loadDisplays();
-    logDisplayMap(state);
+    // logDisplayMap(state);
 
     try installEventTap(&state);
 
-    std.debug.print("Hotkeys active: Ctrl+Cmd+1/2/3\n", .{});
-    std.debug.print("If focus or clicks fail, grant Accessibility permissions.\n", .{});
+    // std.debug.print("Hotkeys active: Ctrl+Cmd+1/2/3\n", .{});
+    // std.debug.print("If focus or clicks fail, grant Accessibility permissions.\n", .{});
 
     c.CFRunLoopRun();
 }
