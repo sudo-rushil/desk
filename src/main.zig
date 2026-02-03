@@ -19,9 +19,10 @@ const HotKeyConfig = struct {
 };
 
 const hotkeys = [_]HotKeyConfig{
-    .{ .id = 1, .key_code = 18, .mods = c.kCGEventFlagMaskCommand | c.kCGEventFlagMaskControl },
-    .{ .id = 2, .key_code = 19, .mods = c.kCGEventFlagMaskCommand | c.kCGEventFlagMaskControl },
-    .{ .id = 3, .key_code = 20, .mods = c.kCGEventFlagMaskCommand | c.kCGEventFlagMaskControl },
+    // 3 is leftmost, then 1, then 2
+    .{ .id = 1, .key_code = 19, .mods = c.kCGEventFlagMaskOption | c.kCGEventFlagMaskControl },
+    .{ .id = 2, .key_code = 20, .mods = c.kCGEventFlagMaskOption | c.kCGEventFlagMaskControl },
+    .{ .id = 3, .key_code = 18, .mods = c.kCGEventFlagMaskOption | c.kCGEventFlagMaskControl },
 };
 
 pub fn main() !void {

@@ -55,6 +55,7 @@ pub const kCGEventTapDisabledByUserInput: CGEventType = 0xFFFFFFFF;
 pub const kCGMouseButtonLeft: CGMouseButton = 0;
 
 pub const kCGEventFlagMaskControl: CGEventFlags = 0x00040000;
+pub const kCGEventFlagMaskOption: CGEventFlags = 0x00080000;
 pub const kCGEventFlagMaskCommand: CGEventFlags = 0x00100000;
 
 pub const kCGKeyboardEventAutorepeat: CGEventField = 8;
