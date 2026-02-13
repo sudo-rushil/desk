@@ -20,8 +20,8 @@ const HotKeyConfig = struct {
 
 const hotkeys = [_]HotKeyConfig{
     .{ .id = 1, .key_code = 20, .mods = c.kCGEventFlagMaskControl },
-    .{ .id = 2, .key_code = 18, .mods = c.kCGEventFlagMaskControl },
-    .{ .id = 3, .key_code = 19, .mods = c.kCGEventFlagMaskControl },
+    .{ .id = 2, .key_code = 19, .mods = c.kCGEventFlagMaskControl },
+    .{ .id = 3, .key_code = 18, .mods = c.kCGEventFlagMaskControl },
 };
 
 pub fn main() !void {
