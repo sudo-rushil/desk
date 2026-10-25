@@ -20,8 +20,8 @@ const HotKeyConfig = struct {
 
 const hotkeys = [_]HotKeyConfig{
     .{ .id = 1, .key_code = 20, .mods = c.kCGEventFlagMaskControl },
-    .{ .id = 2, .key_code = 19, .mods = c.kCGEventFlagMaskControl },
-    .{ .id = 3, .key_code = 18, .mods = c.kCGEventFlagMaskControl },
+    .{ .id = 2, .key_code = 21, .mods = c.kCGEventFlagMaskControl },
+    .{ .id = 3, .key_code = 19, .mods = c.kCGEventFlagMaskControl },
 };
 
 pub fn main() !void {
@@ -52,7 +52,7 @@ fn loadDisplays() !AppState {
     if (err != c.kCGErrorSuccess) return error.DisplayListFailed;
 
     var state = AppState{
-        .display_ids = .{0} ** TargetDisplays,
+        .display_ids = @splat(0),
         .display_count = @as(usize, count),
         .event_tap = null,
     };
